@@ -1,0 +1,209 @@
+// Manual Bootstrap Import
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/reboot";
+@import "../node_modules/bootstrap/scss/type";
+@import "../node_modules/bootstrap/scss/images";
+// @import "../node_modules/bootstrap/scss/code";
+@import "../node_modules/bootstrap/scss/grid";
+@import "../node_modules/bootstrap/scss/tables";
+@import "../node_modules/bootstrap/scss/forms";
+@import "../node_modules/bootstrap/scss/buttons";
+// @import "../node_modules/bootstrap/scss/transitions";
+@import "../node_modules/bootstrap/scss/dropdown";
+@import "../node_modules/bootstrap/scss/button-group";
+@import "../node_modules/bootstrap/scss/input-group";
+// @import "../node_modules/bootstrap/scss/custom-forms";
+@import "../node_modules/bootstrap/scss/nav";
+@import "../node_modules/bootstrap/scss/navbar";
+ @import "../node_modules/bootstrap/scss/card";
+// @import "../node_modules/bootstrap/scss/breadcrumb";
+@import "../node_modules/bootstrap/scss/pagination";
+@import "../node_modules/bootstrap/scss/badge";
+// @import "../node_modules/bootstrap/scss/jumbotron";
+// @import "../node_modules/bootstrap/scss/alert";
+// @import "../node_modules/bootstrap/scss/progress";
+// @import "../node_modules/bootstrap/scss/media";
+@import "../node_modules/bootstrap/scss/list-group";
+// @import "../node_modules/bootstrap/scss/close";
+// @import "../node_modules/bootstrap/scss/toasts";
+@import "../node_modules/bootstrap/scss/modal";
+// @import "../node_modules/bootstrap/scss/tooltip";
+// @import "../node_modules/bootstrap/scss/popover";
+@import "../node_modules/bootstrap/scss/carousel";
+// @import "../node_modules/bootstrap/scss/spinners";
+@import "../node_modules/bootstrap/scss/utilities";
+
+/*------------ Variables -----------*/
+
+$brandprimary: #d96528;
+$brandsecondary: #03c1c1;
+
+/*------------  Global   -----------*/
+
+body {
+  border: 10px solid #ccc;
+  min-height: 100vh;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+  Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+p {
+  margin: 20px 0;
+}
+
+.price {
+  color: $brandprimary;
+  font-size: 20px;
+  margin: 5px 0;
+  font-weight: normal;
+  font-family: "PT Serif", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+  "Helvetica Neue", Arial, sans-serif;
+}
+
+hr {
+  border-top: 1px solid #eee;
+  margin: 30px 0;
+}
+
+/* --- items animation --- */
+
+.items-leave-active {
+  transition: opacity 0.2s ease-out, scale 0.2s ease-out;
+}
+
+.items-move {
+  transition: opacity 0.2s ease-out, scale 0.2s ease-out;
+}
+
+.items-enter-active {
+  transition: opacity 0.2s ease-out, scale 0.2s ease-out;
+}
+
+.items-enter,
+.items-leave-to {
+  opacity: 0;
+  transform: scale(0.9);
+  transform-origin: 50% 50%;
+}
+
+/* --- range --- */
+
+input[type="range"].slider {
+  -webkit-appearance: none;
+  width: 100%;
+  margin: 25px 0 5px;
+}
+
+input[type="range"].slider:focus {
+  outline: none;
+}
+
+input[type="range"].slider::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 4.3px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  background: $brandprimary;
+  border-radius: 13.7px;
+  border: 0px solid rgba(1, 1, 1, 0);
+}
+
+input[type="range"].slider::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 62, 0), 0px 0px 0px rgba(0, 0, 88, 0);
+  border: 1.9px solid $brandprimary;
+  height: 17px;
+  width: 17px;
+  border-radius: 31px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -6.35px;
+}
+
+input[type="range"].slider:focus::-webkit-slider-runnable-track {
+  background: $brandprimary;
+}
+
+input[type="range"].slider::-moz-range-track {
+  width: 100%;
+  height: 4.3px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+  background: $brandprimary;
+  border-radius: 13.7px;
+  border: 0px solid rgba(1, 1, 1, 0);
+}
+
+input[type="range"].slider::-moz-range-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 62, 0), 0px 0px 0px rgba(0, 0, 88, 0);
+  border: 1.9px solid $brandprimary;
+  height: 17px;
+  width: 17px;
+  border-radius: 31px;
+  background: #ffffff;
+  cursor: pointer;
+}
+
+input[type="range"].slider::-ms-track {
+  width: 100%;
+  height: 4.3px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+
+input[type="range"].slider::-ms-fill-lower {
+  background: $brandprimary;
+  border: 0px solid rgba(1, 1, 1, 0);
+  border-radius: 27.4px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+}
+
+input[type="range"].slider::-ms-fill-upper {
+  background: $brandprimary;
+  border: 0px solid rgba(1, 1, 1, 0);
+  border-radius: 27.4px;
+  box-shadow: 0px 0px 0px rgba(0, 0, 0, 0), 0px 0px 0px rgba(13, 13, 13, 0);
+}
+
+input[type="range"].slider::-ms-thumb {
+  box-shadow: 0px 0px 0px rgba(0, 0, 62, 0), 0px 0px 0px rgba(0, 0, 88, 0);
+  border: 1.9px solid $brandprimary;
+  height: 17px;
+  width: 17px;
+  border-radius: 31px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 4.3px;
+}
+
+input[type="range"].slider:focus::-ms-fill-lower {
+  background: $brandprimary;
+}
+
+input[type="range"].slider:focus::-ms-fill-upper {
+  background: $brandprimary;
+}

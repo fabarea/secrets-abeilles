@@ -1,0 +1,56 @@
+{
+  "name": "creation-edouard",
+  "version": "1.0.0",
+  "description": "Boutique en ligne de vêtements africains, Burkina Faso Ouagadougou - Création Sansa Pascal",
+  "author": "sdras",
+  "private": true,
+  "engines": {
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
+  },
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "start:lambda": "netlify-lambda -c ./webpack.functions.js serve functions",
+    "build:lambda": "netlify-lambda build functions"
+  },
+  "dependencies": {
+    "@nuxtjs/proxy": "^1.3.3",
+    "apollo-boost": "^0.4.4",
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
+    "bootstrap-vue": "^2.0.4",
+    "dotenv": "^8.0.0",
+    "encoding": "^0.1.12",
+    "faunadb": "^2.7.0",
+    "graphql": "^14.5.8",
+    "graphql-tag": "^2.10.1",
+    "gsap": "^2.1.3",
+    "jquery": "^3.4.1",
+    "node-fetch": "^2.6.0",
+    "node-sass": "^4.12.0",
+    "nodemailer": "^6.3.0",
+    "nodemailer-smtp-transport": "^2.7.4",
+    "nuxt": "^2.0.0",
+    "sass-loader": "^7.1.0",
+    "stripe": "^7.4.0",
+    "uuid": "^3.3.2",
+    "vue-star-rating": "^1.6.1"
+  },
+  "_1": "npm-run-all to be installed to run in parallel FE and BE ?",
+  "_2": "Check example of https://github.com/netlify/netlify-faunadb-example",
+  "devDependencies": {
+    "netlify-lambda": "^1.6.3",
+    "nodemon": "^1.18.9"
+  },
+  "proxy": {
+    "/.netlify/functions": {
+      "target": "http://localhost:9000",
+      "pathRewrite": {
+        "^/\\.netlify/functions": ""
+      }
+    }
+  }
+}
